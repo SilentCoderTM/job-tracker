@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import ApplicationList from "./components/ApplicationList";
+import AddApplication from "./components/AddApplication";
 import "./App.css";
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
   return (
       <div className="app">
         <h1>Job Application Tracker</h1>
+        <AddApplication onMutate={fetchApplications}/>
         <ApplicationList applications={applications} onMutate={fetchApplications} />
       </div>
   );
